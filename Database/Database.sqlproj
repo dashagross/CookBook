@@ -149,4 +149,7 @@
     <Build Include="dbo\Tables\Recipes.sql" />
     <Build Include="dbo\Tables\RecipesToTypes.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment.sql" />
+  </ItemGroup>
 </Project>
