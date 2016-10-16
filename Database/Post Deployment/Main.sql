@@ -10,12 +10,12 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
-:r "Reference Data\DishTypes.sql"
-:r "Reference Data\Ingredients.sql"
-:r "Reference Data\MeasurementUnitNames.sql"
 :r "Reference Data\Products.sql"
-:r "Reference Data\ProductsToTypes.sql"
-:r "Reference Data\ProductToMeasurementUnit.sql"
 :r "Reference Data\ProductTypes.sql"
+:r "Reference Data\DishTypes.sql"
 :r "Reference Data\Recipes.sql"
+:r "Reference Data\MeasurementUnitNames.sql"
+:r "Reference Data\ProductToMeasurementUnit.sql"
+:r "Reference Data\Ingredients.sql"
+:r "Reference Data\ProductsToTypes.sql"
 :r "Reference Data\RecipesToTypes.sql"
