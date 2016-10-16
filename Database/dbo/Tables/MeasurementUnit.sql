@@ -1,7 +1,6 @@
-﻿CREATE TABLE [dbo].[MeasurementUnit] (
-    [ID]   INT           NOT NULL,
-    [Unit] NVARCHAR (255) NOT NULL,
-    [Mass] REAL          NOT NULL,
-    PRIMARY KEY CLUSTERED ([ID] ASC)
+﻿create table MeasurementUnitNames (
+    Id               int NOT NULL,
+    Name  nvarchar (255) NOT NULL,
+    primary key clustered ([Id] asc)
 );
 

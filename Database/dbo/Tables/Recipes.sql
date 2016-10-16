@@ -1,10 +1,10 @@
-﻿CREATE TABLE [dbo].[Recipes]
+﻿create table Recipes
 (
-	[ID]                  INT NOT NULL,
-	[Title]		NVARCHAR(255) NOT NULL,
-    [Time]				 REAL NOT NULL,
-	[PortionCount]        INT not null,
-	[Method]			NTEXT NOT NULL,
+	Id                       int not null,
+	Title		   nvarchar(255) not null,
+    CookingTime		        real not null,
+	PortionCount             int not null,
+	Method			       ntext not null
 
-    PRIMARY KEY CLUSTERED ([ID] ASC)
+    primary key clustered ([Id] asc)
 )

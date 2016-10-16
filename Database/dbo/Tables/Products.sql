@@ -1,10 +1,10 @@
-﻿CREATE TABLE [dbo].[Products] (
-    [ID]          INT            NOT NULL,
-    [Name]        NVARCHAR (255) NOT NULL,
-    [EnergyValue] REAL           NOT NULL,
-    [Protein]     REAL           NOT NULL,
-    [Fats]        REAL           NOT NULL,
-    [Carbs]       REAL           NOT NULL,
-    PRIMARY KEY CLUSTERED ([ID] ASC)
+﻿create table Products (
+    Id          int            not null,
+    Name        nvarchar (255) not null,
+    EnergyValue real           not null,
+    Protein     real           not null,
+    Fats        real           not null,
+    Carbs       real           not null
+    primary key clustered ([Id] asc)
 );
 

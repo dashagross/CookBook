@@ -1,6 +1,6 @@
-﻿CREATE TABLE [dbo].[DishTypes]
+﻿create table DishTypes
 (
-	[ID] INT NOT NULL,
-	[Type] NVARCHAR (50) NOT NULL,
-	PRIMARY KEY CLUSTERED ([ID] ASC)
+	Id   int           not null,
+	Name nvarchar (50) not null,
+	primary key clustered ([Id] asc)
 )

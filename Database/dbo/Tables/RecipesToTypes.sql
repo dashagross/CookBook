@@ -1,9 +1,9 @@
-﻿CREATE TABLE [dbo].[RecipesToTypes]
+﻿create table RecipesToTypes
 (
-	[ID]            INT NOT NULL,
-	[RecipeID]      INT NOT NULL,
-    [TypeID]        INT NOT NULL,
-    PRIMARY KEY CLUSTERED ([ID] ASC),
-    CONSTRAINT [FK_RecipesToTypes_ToRecipes] FOREIGN KEY ([RecipeID]) REFERENCES [dbo].[Recipes] ([ID]), 
-    CONSTRAINT [FK_RecipesToTypes_ToDishTypes] FOREIGN KEY ([TypeID]) REFERENCES [dbo].[DishTypes]([ID])
+	Id           int not null,
+	RecipeId     int not null,
+    TypeId       int not null
+    primary key clustered ([Id] ASC),
+    constraint FK_RecipesToTypes_ToRecipes   foreign key ([RecipeId]) references Recipes ([Id]), 
+    constraint FK_RecipesToTypes_ToDishTypes foreign key ([TypeId])   references DishTypes([Id])
 )

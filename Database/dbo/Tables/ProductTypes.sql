@@ -1,6 +1,6 @@
-﻿CREATE TABLE [dbo].[ProductTypes] (
-    [ID]   INT           NOT NULL,
-    [Name] NVARCHAR (50) NOT NULL,
-    PRIMARY KEY CLUSTERED ([ID] ASC)
+﻿create table ProductTypes (
+    Id    int           not null,
+    Name  nvarchar (50) not null
+    primary key clustered ([Id] asc)
 );
 
