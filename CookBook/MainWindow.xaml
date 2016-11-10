@@ -5,8 +5,202 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CookBook"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Name="Main_Window" Height="600"    Width="800"
+                                              MinHeight="600" MinWidth="800"
+        DataContext="{Binding Path=ViewModel, RelativeSource={RelativeSource Self} }">
+    <TabControl>
+
+        <TabItem Header="CookBook">
+            <DockPanel Margin="5">
+
+                <StackPanel Name="Top_Part" DockPanel.Dock="Top">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Name="Tab_Name"   Grid.Column="0" Margin="10,0"  
+                                   Text="Recipes" FontSize="20" VerticalAlignment="Bottom"/>
+                        <Button    Name="Add_Recipe" Grid.Column="1" Margin="10,0">
+                            <TextBlock Margin="10,5" Text="Add NEW"/>
+                        </Button>
+                    </Grid>
+
+                    <Rectangle Margin="0,5" Height="1" Fill="LightGray"/>
+
+                </StackPanel>
+
+                <Grid  Name="Main_Part" DockPanel.Dock="Bottom" Margin="10">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Name="Filters" Grid.Column="0" Margin="0,10">
+
+                        <StackPanel Name="Types_Filter" Margin="0,10,20,10">
+                            <TextBlock Text="Dish Types:"/>
+                            <CheckBox  Content="Breakfast"/>
+                            <CheckBox  Content="Lunch"/>
+                            <CheckBox  Content="Dinner"/>
+                            <CheckBox  Content="Soup"/>
+                            <CheckBox  Content="Salad"/>
+                        </StackPanel>
+
+                        <StackPanel Name="Duration_Filter" Margin="0,10,20,10">
+                            <TextBlock Text="Duration:"/>
+                            <CheckBox  Content="Less 30 min."/>
+                            <CheckBox  Content="Less 1 hour"/>
+                            <CheckBox  Content="Less 2 hour"/>
+                            <CheckBox  Content="2-3 hours"/>
+                            <CheckBox  Content="3 hour and more"/>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                    <ListView Grid.Column="1"  Name="All_Recipes" Background="WhiteSmoke"
+                              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                              TextBlock.TextAlignment="Justify"
+                              VirtualizingPanel.ScrollUnit="Pixel"
+                              ItemsSource="{Binding Recipes}"  >
+
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+
+                        <ListView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <DockPanel LastChildFill="True">
+
+                                    <Rectangle DockPanel.Dock="Bottom" Margin="10" Height="1" Fill="LightGray"/>
+
+                                    <Grid Name="Markup_Of_Listview" Margin="10" >
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" MinWidth="300"/>
+                                            <ColumnDefinition Width="auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock Grid.Column="0" Grid.Row="0" Margin="5"
+                                                   Text="{Binding Name}"/>
+
+                                        <StackPanel Grid.Column="0" Grid.Row="1">
+
+                                            <StackPanel Margin="5" Name="Duration_Panel" Orientation="Horizontal">
+                                                <TextBlock Text="Duration: "/>
+                                                <TextBlock Text="{Binding Duration}"/>
+                                            </StackPanel>
+
+                                            <Grid Name="En_Val_Grid">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="auto"/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                </Grid.RowDefinitions>
+
+                                                <TextBlock Text="Energy Value:  " Margin="5,0"
+                                                           Grid.Column="0"
+                                                              Grid.Row="0"/>
+                                                <TextBlock Text="Protein: " Margin="5,0"
+                                                           Grid.Column="0"
+                                                              Grid.Row="1"/>
+                                                <TextBlock Text="Fats: " Margin="5,0"
+                                                           Grid.Column="0"
+                                                              Grid.Row="2"/>
+                                                <TextBlock Text="Carbs: " Margin="5,0"
+                                                           Grid.Column="0"
+                                                              Grid.Row="3"/>
+                                                <TextBlock Text="{Binding EnergyValue}"
+                                                           Grid.Column="1"
+                                                              Grid.Row="0"/>
+                                                <TextBlock Text="{Binding Protein}"
+                                                           Grid.Column="1"
+                                                              Grid.Row="1"/>
+                                                <TextBlock Text="{Binding Fats}"
+                                                           Grid.Column="1"
+                                                              Grid.Row="2"/>
+                                                <TextBlock Text="{Binding Carbs}"
+                                                           Grid.Column="1"
+                                                              Grid.Row="3"/>
+
+                                            </Grid>
+
+                                            <StackPanel Margin="5" Name="Ingredients_Panel">
+                                                <TextBlock Text="Ingredients:"/>
+                                                <TextBlock Text="{Binding Ingredient}" TextWrapping="Wrap"/>
+                                            </StackPanel>
+
+                                            <StackPanel Margin="5" Name="Description_Panel">
+                                                <TextBlock Text="Сoncise description:"/>
+                                                <TextBlock Text="{Binding ConciseDescription}" TextWrapping="Wrap"/>
+                                            </StackPanel>
+
+                                        </StackPanel>
+
+                                        <Grid Name="Buttons"
+                                              Grid.Column="1"
+                                              Grid.Row="0">
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition Width="auto"/>
+                                                <ColumnDefinition Width="auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Button Grid.Column="0" Content="Cook!"  Margin="5"/>
+                                            <Button Grid.Column="1" Content="Edit"   Margin="5"/>
+                                            <Button Grid.Column="2" Content="Delete" Margin="5"/>
+
+                                        </Grid>
+
+                                        <Image Grid.Column="1"
+                                               Grid.Row="1"
+                                               Height="150" Width="200"
+                                               Margin="10"
+                                               HorizontalAlignment="Right"
+                                               Source="D:\repos\receipe-icon.png"/>
+
+                                    </Grid>
+
+                                </DockPanel>
+
+                            </DataTemplate>
+
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </Grid>
+
+            </DockPanel>
+
+        </TabItem>
+
+
+        <TabItem Header="Products">
+
+        </TabItem>
+
+
+        <TabItem Header="Let's Cook!">
+
+        </TabItem>
+
+    </TabControl>
 </Window>
