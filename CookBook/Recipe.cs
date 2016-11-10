@@ -2,7 +2,7 @@
 
 namespace CookBook
 {
-    public class Recipe
+    /*public class Recipe
     {
         public string Name { get; set; }
 
@@ -19,5 +19,5 @@ namespace CookBook
         public string Ingredient { get; set; }
 
         public string ConciseDescription { get; set; }
-    }
+    }*/
 }

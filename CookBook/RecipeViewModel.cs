@@ -16,7 +16,7 @@ namespace CookBook
         {
             Recipes = new ObservableCollection<Recipe>()
             {
-                new Recipe
+                /*new Recipe
                 {
                     Name = "Блины",
                     Duration = new TimeSpan(0, 30, 0),
@@ -48,7 +48,7 @@ namespace CookBook
                     Carbs = 7,
                     Ingredient = "Говядина, Лук репчатый, Мука пшеничная, Томатная паста, Соль, Чеснок",
                     ConciseDescription = "Отличное второе блюдо, очень простое в приготовлении, можно подавать с пастой или рисом."
-                }
+                }*/
             };
         }
     }
