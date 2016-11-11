@@ -7,10 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Name="Main_Window" Height="600"    Width="800"
                                               MinHeight="600" MinWidth="800"
-        DataContext="{Binding Path=ViewModel, RelativeSource={RelativeSource Self} }">
+        DataContext="{Binding RelativeSource={RelativeSource Self} }">
     <TabControl>
 
-        <TabItem Header="CookBook">
+        <TabItem Header="CookBook"
+                 DataContext="{Binding RecipeViewModel}">
             <DockPanel Margin="5">
 
                 <StackPanel Name="Top_Part" DockPanel.Dock="Top">
@@ -193,7 +194,72 @@
         </TabItem>
 
 
-        <TabItem Header="Products">
+        <TabItem Header="Products"
+                 DataContext="{Binding ProductViewModel}">
+
+            <DockPanel Margin="5">
+
+                <StackPanel Name="Top_Part2" DockPanel.Dock="Top">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Name="Tab_Name2"   Grid.Column="0" Margin="10,0"  
+                                   Text="Products" FontSize="20" VerticalAlignment="Bottom"/>
+                        <Button    Name="Add_Product" Grid.Column="1" Margin="10,0">
+                            <TextBlock Margin="10,5" Text="Add NEW"/>
+                        </Button>
+                    </Grid>
+
+                    <Rectangle Margin="0,5" Height="1" Fill="LightGray"/>
+
+                </StackPanel>
+
+                <Grid Name="Main_Part2" DockPanel.Dock="Bottom" Margin="10">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Name="Filters2" Grid.Column="0" Margin="0,10">
+
+                        <StackPanel Name="Types_Filter2" Margin="0,10,20,10">
+
+                            <TextBlock Text="Product Types:"/>
+                            <ListBox ItemsSource="{Binding ???}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <CheckBox Content="{Binding Type}" IsChecked="{Binding IsChecked}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+
+
+                        </StackPanel>
+
+                    </StackPanel>
+
+                    <DataGrid Grid.Column="1" AutoGenerateColumns="False" HeadersVisibility="Column"
+                              ItemsSource="{Binding Products}">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name"      Width="*"   Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="En. Value" Width="70"  Binding="{Binding EnergyValue}"/>
+                            <DataGridTextColumn Header="Protein"   Width="70"  Binding="{Binding Protein}"/>
+                            <DataGridTextColumn Header="Fats"      Width="70"  Binding="{Binding Fats}"/>
+                            <DataGridTextColumn Header="Carbs"     Width="70"  Binding="{Binding Carbs}"/>
+                        </DataGrid.Columns>
+
+                    </DataGrid>
+
+                </Grid>
+
+            </DockPanel>
 
         </TabItem>
 

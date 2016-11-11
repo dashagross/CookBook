@@ -5,8 +5,8 @@ namespace CookBook
 {
     public class RecipeViewModel
     {
-        private ObservableCollection<Recipe> m_Recipes;
-        public ObservableCollection<Recipe> Recipes
+        private ObservableCollection<TestRecipe> m_Recipes;
+        public ObservableCollection<TestRecipe> Recipes
         {
             get { return m_Recipes; }
             set { m_Recipes = value; }
@@ -14,9 +14,9 @@ namespace CookBook
 
         public RecipeViewModel()
         {
-            Recipes = new ObservableCollection<Recipe>()
+            Recipes = new ObservableCollection<TestRecipe>()
             {
-                /*new Recipe
+                new TestRecipe
                 {
                     Name = "Блины",
                     Duration = new TimeSpan(0, 30, 0),
@@ -27,7 +27,7 @@ namespace CookBook
                     Ingredient = "Яйцо куриное, Мука, Молоко",
                     ConciseDescription = "Тонкие нежирные блинчики."
                 },
-                new Recipe
+                new TestRecipe
                 {
                     Name = "Летний салат",
                     Duration = new TimeSpan(0, 15, 0),
@@ -38,7 +38,7 @@ namespace CookBook
                     Ingredient = "Помидоры розовые, Огурцы тепличные, Перец болгарский",
                     ConciseDescription = "Быстрый и вкусный салат, хорошо подходит к жаренному мясу."
                 },
-                new Recipe
+                new TestRecipe
                 {
                     Name = "Гуляш из говядины",
                     Duration = new TimeSpan(1, 30, 0),
@@ -48,7 +48,7 @@ namespace CookBook
                     Carbs = 7,
                     Ingredient = "Говядина, Лук репчатый, Мука пшеничная, Томатная паста, Соль, Чеснок",
                     ConciseDescription = "Отличное второе блюдо, очень простое в приготовлении, можно подавать с пастой или рисом."
-                }*/
+                }
             };
         }
     }

@@ -64,7 +64,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LinqToSQL.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Recipe.cs" />
+    <Compile Include="TestProduct.cs" />
+    <Compile Include="ProductViewModel.cs" />
+    <Compile Include="TestRecipe.cs" />
     <Compile Include="RecipeViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

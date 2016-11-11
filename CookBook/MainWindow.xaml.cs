@@ -15,11 +15,14 @@ namespace CookBook
 {
     public partial class MainWindow : Window
     {
-        public RecipeViewModel ViewModel { get; set; }
+        public RecipeViewModel RecipeViewModel { get; set; }
+
+        public ProductViewModel ProductViewModel { get; set; }
 
         public MainWindow()
         {
-            ViewModel = new RecipeViewModel();
+            RecipeViewModel = new RecipeViewModel();
+            ProductViewModel = new ProductViewModel();
             InitializeComponent();
         }
     }

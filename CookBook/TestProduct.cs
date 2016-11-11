@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CookBook
 {
-    /*public class Recipe
+    public class TestProduct
     {
         public string Name { get; set; }
 
-        public TimeSpan Duration { get; set; }
+        public string Type { get; set; }
 
         public double EnergyValue { get; set; }
 
@@ -15,9 +19,5 @@ namespace CookBook
         public double Fats { get; set; }
 
         public double Carbs { get; set; }
-
-        public string Ingredient { get; set; }
-
-        public string ConciseDescription { get; set; }
-    }*/
+    }
 }
