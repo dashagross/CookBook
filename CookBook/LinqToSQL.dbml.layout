@@ -2,54 +2,101 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LinqToSQL">
   <DataContextMoniker Name="/LinqToSQLDataContext" />
   <nestedChildShapes>
-    <classShape Id="2e13e0ad-c654-4df1-992a-cc334ef8b23f" absoluteBounds="0.5, 0.5, 2, 1.9631982421875">
+    <classShape Id="cd38ceb2-dae1-46c8-aec0-22f1abede637" absoluteBounds="3.75, 0.5, 2, 1.9631982421875">
       <DataClassMoniker Name="/LinqToSQLDataContext/Product" />
       <nestedChildShapes>
-        <elementListCompartment Id="edaa0a52-4190-432d-80ea-0bbb3c72d64a" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9da6aef0-3a06-4104-8ac8-f4feec7b719e" absoluteBounds="3.7650000000000006, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="cc46a2eb-8115-4c3e-a51c-80df4a88b03d" absoluteBounds="5, 0.5, 2, 1.1939925130208333">
-      <DataClassMoniker Name="/LinqToSQLDataContext/DishType" />
-      <nestedChildShapes>
-        <elementListCompartment Id="9d43e42e-36cb-4992-b624-8bcf6ee9151f" absoluteBounds="5.0150000000000006, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="058bda12-7426-410d-8ead-f15aeef64b9d" absoluteBounds="2.75, 0.5, 2, 1.1939925130208333">
+    <classShape Id="fb8a4a5e-856c-4707-b257-7dc57d8dd19d" absoluteBounds="0.5, 2.25, 2, 1.1939925130208333">
       <DataClassMoniker Name="/LinqToSQLDataContext/ProductType" />
       <nestedChildShapes>
-        <elementListCompartment Id="37a294f5-bc52-4c95-8c65-f687440b634e" absoluteBounds="2.7649999999999997, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="46f7baf4-bab5-4131-b8e0-bb5c424729d3" absoluteBounds="0.51499999999999968, 2.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="2bf2a839-946e-422a-aa21-918de7f6fe55" absoluteBounds="7.25, 0.5, 2, 1.1939925130208333">
-      <DataClassMoniker Name="/LinqToSQLDataContext/MeasurementUnitName" />
+    <classShape Id="ea9b72d5-d722-4c8d-a879-6f44587ea919" absoluteBounds="0.5, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LinqToSQLDataContext/ProductsToType" />
       <nestedChildShapes>
-        <elementListCompartment Id="e0c3dc1e-db12-41e6-8d56-93eab1e1f0b2" absoluteBounds="7.2650000000000006, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="3b1a57ab-f0d0-4d40-9a9d-208e9e14ad58" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="fc17d94a-8612-4106-9df2-71d90b8cbea4" absoluteBounds="0.5, 2.875, 2, 1.7708968098958331">
-      <DataClassMoniker Name="/LinqToSQLDataContext/Ingredient" />
-      <nestedChildShapes>
-        <elementListCompartment Id="9adc7ddb-ba37-485b-ab4f-61dfa3508dd8" absoluteBounds="0.515, 3.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <associationConnector edgePoints="[(1.5 : 2.4631982421875); (1.5 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/LinqToSQLDataContext/Product/Product_Ingredient" />
+    <associationConnector edgePoints="[(3.75 : 1.19314697265625); (2.5 : 1.19314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSQLDataContext/Product/Product_ProductsToType" />
       <nodes>
-        <classShapeMoniker Id="2e13e0ad-c654-4df1-992a-cc334ef8b23f" />
-        <classShapeMoniker Id="fc17d94a-8612-4106-9df2-71d90b8cbea4" />
+        <classShapeMoniker Id="cd38ceb2-dae1-46c8-aec0-22f1abede637" />
+        <classShapeMoniker Id="ea9b72d5-d722-4c8d-a879-6f44587ea919" />
       </nodes>
     </associationConnector>
-    <classShape Id="51f8c4d8-3b29-4ca9-8f6a-067635c378dd" absoluteBounds="2.875, 2.875, 2, 1.7708968098958331">
-      <DataClassMoniker Name="/LinqToSQLDataContext/Recipe" />
+    <associationConnector edgePoints="[(1.5 : 2.25); (1.5 : 1.8862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSQLDataContext/ProductType/ProductType_ProductsToType" />
+      <nodes>
+        <classShapeMoniker Id="fb8a4a5e-856c-4707-b257-7dc57d8dd19d" />
+        <classShapeMoniker Id="ea9b72d5-d722-4c8d-a879-6f44587ea919" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bd1b0cd0-1b7e-4bd6-bff2-1aa25873fcbd" absoluteBounds="7.125, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LinqToSQLDataContext/ProductUnit" />
       <nestedChildShapes>
-        <elementListCompartment Id="88c3d3d3-4e42-42b0-a6e6-6cb62b672a3f" absoluteBounds="2.89, 3.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d6272d0e-011e-47e0-89ec-04047e42e959" absoluteBounds="7.1400000000000006, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.875 : 3.76044840494792); (2.5 : 3.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.75 : 1.28929768880208); (7.125 : 1.28929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSQLDataContext/Product/Product_ProductUnit" />
+      <nodes>
+        <classShapeMoniker Id="cd38ceb2-dae1-46c8-aec0-22f1abede637" />
+        <classShapeMoniker Id="bd1b0cd0-1b7e-4bd6-bff2-1aa25873fcbd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d734e53a-802c-4d08-8b8e-3b64004152dd" absoluteBounds="6.5, 3.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LinqToSQLDataContext/Ingredient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="987a30de-dbab-44f5-b387-6206bbd178bf" absoluteBounds="6.5150000000000006, 4.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.8125 : 2.07859537760417); (7.8125 : 3.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSQLDataContext/ProductUnit/ProductUnit_Ingredient" />
+      <nodes>
+        <classShapeMoniker Id="bd1b0cd0-1b7e-4bd6-bff2-1aa25873fcbd" />
+        <classShapeMoniker Id="d734e53a-802c-4d08-8b8e-3b64004152dd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="45337530-47a7-4906-adbb-be429772f83d" absoluteBounds="3.875, 3.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/LinqToSQLDataContext/Recipe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42fce074-5feb-4234-9a79-5b2b0978741a" absoluteBounds="3.8900000000000006, 4.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.875 : 4.41429768880208); (6.5 : 4.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqToSQLDataContext/Recipe/Recipe_Ingredient" />
       <nodes>
-        <classShapeMoniker Id="51f8c4d8-3b29-4ca9-8f6a-067635c378dd" />
-        <classShapeMoniker Id="fc17d94a-8612-4106-9df2-71d90b8cbea4" />
+        <classShapeMoniker Id="45337530-47a7-4906-adbb-be429772f83d" />
+        <classShapeMoniker Id="d734e53a-802c-4d08-8b8e-3b64004152dd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d1b3ac51-0c7a-438d-b50b-071d6366c073" absoluteBounds="6.5, 6, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/LinqToSQLDataContext/DishType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f954a6fa-4680-49df-aa7f-6f6ae1c7a79d" absoluteBounds="6.5150000000000006, 6.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8fdde3e2-57ad-47c5-98a2-513581859d5f" absoluteBounds="3.875, 6, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LinqToSQLDataContext/RecipesToType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44ce5775-71bc-4cf0-9ed0-86990c05c5db" absoluteBounds="3.8899999999999997, 6.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.5 : 6.59699625651042); (5.875 : 6.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSQLDataContext/DishType/DishType_RecipesToType" />
+      <nodes>
+        <classShapeMoniker Id="d1b3ac51-0c7a-438d-b50b-071d6366c073" />
+        <classShapeMoniker Id="8fdde3e2-57ad-47c5-98a2-513581859d5f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 5.39589680989583); (4.875 : 6)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSQLDataContext/Recipe/Recipe_RecipesToType" />
+      <nodes>
+        <classShapeMoniker Id="45337530-47a7-4906-adbb-be429772f83d" />
+        <classShapeMoniker Id="8fdde3e2-57ad-47c5-98a2-513581859d5f" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

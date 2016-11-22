@@ -134,15 +134,11 @@
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
-    <Build Include="dbo\Tables\MeasurementUnitNames.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
     <Build Include="dbo\Tables\ProductsToTypes.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
-    <Build Include="dbo\Tables\ProductToMeasurementUnit.sql">
+    <Build Include="dbo\Tables\ProductUnit.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
@@ -156,8 +152,7 @@
     <None Include="Post Deployment\Reference Data\Products.sql" />
     <None Include="Post Deployment\Reference Data\ProductTypes.sql" />
     <None Include="Post Deployment\Reference Data\ProductsToTypes.sql" />
-    <None Include="Post Deployment\Reference Data\MeasurementUnitNames.sql" />
-    <None Include="Post Deployment\Reference Data\ProductToMeasurementUnit.sql" />
+    <None Include="Post Deployment\Reference Data\ProductUnit.sql" />
     <None Include="Post Deployment\Reference Data\DishTypes.sql" />
     <None Include="Post Deployment\Reference Data\Ingredients.sql" />
     <None Include="Post Deployment\Reference Data\Recipes.sql" />

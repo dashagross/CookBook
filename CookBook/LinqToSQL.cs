@@ -1,5 +1,6 @@
-namespace CookBook
+namespace DataLayer
 {
+
     partial class LinqToSQLDataContext
     {
     }

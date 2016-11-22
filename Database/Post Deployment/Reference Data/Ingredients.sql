@@ -1,24 +1,23 @@
 ﻿merge into Ingredients as Target
 using (values
-(0, 0, 1, 1,   0),
-(1, 1, 3, 3,   0),
-(2, 3, 6, 2,   0),
-(3, 1, 3, 2,   1),
-(4, 2, 0, 600, 2),
-(5, 4, 3, 6,   3),
-(6, 5, 0, 100, 3)
+(0, 1, 1,   0),
+(1, 3, 3,   0),
+(2, 6, 2,   0),
+(3, 3, 2,   1),
+(4, 0, 600, 2),
+(5, 3, 6,   3),
+(6, 0, 100, 3)
 )
-as Source (Id, ProductId, MeasurementUnitId, Amount, RecipeId)
+as Source (Id, ProductUnitId, Amount, RecipeId)
 on Target.Id = Source.Id
 when matched then
 update set
-ProductId         = Source.ProductId, 
-MeasurementUnitId = Source.MeasurementUnitId, 
-Amount            = Source.Amount, 
-RecipeId          = Source.RecipeId         
+ProductUnitId = Source.ProductUnitId, 
+Amount        = Source.Amount, 
+RecipeId      = Source.RecipeId         
 when not matched by target then
-insert (Id, ProductId, MeasurementUnitId, Amount, RecipeId)
-values (Id, ProductId, MeasurementUnitId, Amount, RecipeId)
+insert (Id, ProductUnitId, Amount, RecipeId)
+values (Id, ProductUnitId, Amount, RecipeId)
 when not matched by source then
 delete;
 
